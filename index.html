@@ -666,17 +666,7 @@ window.addEventListener('resize',()=>{
   renderer.setSize(W,H);
   if(starPts)starPts.material.uniforms.uDPR.value=Math.min(devicePixelRatio,2);
 });
-function enterFullscreen() {
-  const element = document.documentElement; // Targets the entire page
 
-  if (element.requestFullscreen) {
-    element.requestFullscreen();
-  } else if (element.webkitRequestFullscreen) { /* Safari / Chrome (older) */
-    element.webkitRequestFullscreen();
-  } else if (element.msRequestFullscreen) { /* IE11 / Edge */
-    element.msRequestFullscreen();
-  }
-}
 // ── SPLASH ────────────────────────────────────────
 document.getElementById('start-btn').addEventListener('click',()=>{
   document.getElementById('splash').classList.add('out');
